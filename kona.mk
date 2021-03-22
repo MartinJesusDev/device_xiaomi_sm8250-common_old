@@ -326,7 +326,6 @@ PRODUCT_PACKAGES += \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \
     init.qcom.efs.sync.sh \
-    init.qcom.post_boot.sh \
     init.qcom.sdio.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
@@ -339,11 +338,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.qcom.factory.rc \
-    init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.hardware.rc \
     init.recovery.qcom.rc \
+    init.qcom.power.rc \
     init.target.rc \
     fstab.qcom \
     ueventd.qcom.rc
