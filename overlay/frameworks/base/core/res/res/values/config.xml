@@ -325,6 +325,9 @@
           pulsating and RGB control would set this config to 75. -->
      <integer name="config_deviceLightCapabilities">232</integer>
 
+    <!-- Whether to show a custom view for FOD -->
+    <bool name="config_needCustomFODView">true</bool>
+
     <!-- Screen off FOD -->
     <bool name="config_supportScreenOffFod">true</bool>
 </resources>
