@@ -23,6 +23,8 @@ import android.content.Intent;
 import android.util.Log;
 
 import org.lineageos.settings.fod.FodUtils;
+import android.provider.Settings;
+import android.content.pm.PackageManager;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -31,6 +33,20 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, Intent intent) {
+     try {
+            // We need to reset this setting to trigger an update in display service
+            final float refreshRate = Settings.System.getFloat(context.getContentResolver(),
+                Settings.System.MIN_REFRESH_RATE, 77.0f);
+            Thread.sleep(500);
+            Settings.System.putFloat(context.getContentResolver(),
+                Settings.System.MIN_REFRESH_RATE, 77.0f);
+            Thread.sleep(500);
+            Settings.System.putFloat(context.getContentResolver(),
+                Settings.System.MIN_REFRESH_RATE, refreshRate);
+        } catch (Exception e) {
+            // Ignore
+        }
+
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
         FodUtils.startService(context);
     }
