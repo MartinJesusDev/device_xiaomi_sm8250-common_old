@@ -22,4 +22,13 @@
        3 = right side
     -->
     <integer name="config_fingerprintSensorLocation">1</integer>
+
+    <!-- Enable Battery Heath -->
+    <bool name="config_supportBatteryHealth">true</bool>
+
+    <!-- Battery Health -->
+    <string name="config_batChargeCycle">/sys/class/power_supply/battery/cycle_count</string>
+    <string name="config_batDesCap">/sys/class/power_supply/battery/charge_full_design</string>
+    <string name="config_batCurCap">/sys/class/power_supply/battery/charge_full</string>
+
 </resources>
