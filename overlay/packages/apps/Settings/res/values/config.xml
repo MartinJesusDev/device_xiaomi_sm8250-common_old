@@ -31,4 +31,7 @@
     <string name="config_batDesCap">/sys/class/power_supply/battery/charge_full_design</string>
     <string name="config_batCurCap">/sys/class/power_supply/battery/charge_full</string>
 
+    <!-- Smart Charging -->
+    <bool name="config_supportSmartCharging">true</bool>
+    <bool name="config_smartChargingAvailable">true</bool>
 </resources>
