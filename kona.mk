@@ -326,10 +326,8 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
-    init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     init.qti.media.sh \
-    init.qti.qcv.sh \
     qca6234-service.sh
 
 PRODUCT_PACKAGES += \
@@ -337,10 +335,8 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.recovery.hardware.rc \
     init.recovery.qcom.rc \
     init.target.rc \
-    init.target.wigig.rc \
     fstab.qcom \
     ueventd.qcom.rc
 
