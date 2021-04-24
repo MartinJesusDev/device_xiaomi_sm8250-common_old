@@ -199,9 +199,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
-# GPS
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/gps,$(TARGET_COPY_OUT_VENDOR)/etc)
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
