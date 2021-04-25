@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.fod.FodUtils;
 import android.provider.Settings;
 import android.content.pm.PackageManager;
@@ -48,6 +49,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
 
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
+        DozeUtils.checkDozeService(context);
         FodUtils.startService(context);
     }
 }
