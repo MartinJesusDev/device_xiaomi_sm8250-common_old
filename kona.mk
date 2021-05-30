@@ -139,6 +139,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstdc++.vendor
 
+# Component overrides
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
 # Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -147,10 +151,6 @@ PRODUCT_PACKAGES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# Component overrides
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
 # Display
 PRODUCT_PACKAGES += \
@@ -187,12 +187,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_kona
-
-PRODUCT_PACKAGES += \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
-
-PRODUCT_PACKAGES += \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_kona \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor \
     vendor.xiaomi.hardware.touchfeature@1.0.vendor
 
@@ -347,6 +343,7 @@ PRODUCT_PACKAGES += \
     qca6234-service.sh \
 
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
@@ -354,7 +351,6 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.qcom.power.rc \
     init.target.rc \
-    fstab.qcom \
     ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
